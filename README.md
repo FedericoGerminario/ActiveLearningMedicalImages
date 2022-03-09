@@ -12,7 +12,7 @@ Images are taken from the [DRIVE dataset](https://paperswithcode.com/dataset/dri
 ## Preprocessing 
 In the preprocessing phase, there is a preliminary extraction of 32 X 32 patches from the input images. Only images with at least a partial not-black background are consider in the training, the others are simply neglected.
 <p align="center">
-  <img src="" alt="Image of preprocessing"/>
+  <img src="https://github.com/FedericoGerminario/ActiveLearningMedicalImages/blob/master/Immagini/metodo.PNG" alt="Image of preprocessing"/>
 </p> 
 
 ## Classification task with active learning framework
@@ -20,14 +20,14 @@ we used an Active Learning technique on the classifier that consists in selectin
 As a classification network, we mainly used the PNET architecture, but we also tried well known networks as ResNet50 and VGG16, both pre-trained on ImageNet dataset and fine-tuned on eye’s images.
 As uncertainty measures we implemented Least Confidence and Entropy, that both returns the sample on which the classifier
 is more uncertain on.
-Some data augmentation is also applied to the images.
+Data augmentation is also applied to the images.
 <p align="center">
-  <img src="" alt="Image of classification"/>
+  <img src="https://github.com/FedericoGerminario/ActiveLearningMedicalImages/blob/master/Immagini/rete.PNG" alt="Image of classification"/>
 </p> 
 
 In order to obtain a first approximation of pixel-level labels we used K-means clustering algorithm and OpenCV Canny method.
 <p align="center">
-  <img src="" alt="Image of output from kmeans and Canny"/>
+  <img src="https://github.com/FedericoGerminario/ActiveLearningMedicalImages/blob/master/Immagini/kmeans_canny.PNG" alt="Image of output from kmeans and Canny"/>
 </p> 
 
 ## Segmentation task
@@ -37,5 +37,5 @@ labels coming from Canny and K-means and the second Unet will produce better seg
 first Unet.
 
 <p align="center">
-  <img src="" alt="Image of output from kmeans and Canny"/>
+  <img src="https://github.com/FedericoGerminario/ActiveLearningMedicalImages/blob/master/Immagini/output.PNG" alt="Image of output from kmeans and Canny"/>
 </p> 
